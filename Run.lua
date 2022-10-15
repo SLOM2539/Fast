@@ -76,17 +76,17 @@ sudo apt-get update
 sudo apt-get upgrade -y
 cd ..
 rm -rf luarocks*
-unzip tdlua.zip
+unzip luatele.zip
 sudo mv tdlua.so /usr/lib/x86_64-linux-gnu/lua/5.2/tdlua.so
-rm -fr tdlua.zip
+rm -fr luatele.zip
 sudo lua5.2 Fast.lua
 ;;
 2)
 echo -e "\e[1m\e[32mThe bot is running now : جاري تشغيل البوت الان : \e[0m"
 sleep 2
-unzip tdlua.zip
+unzip luatele.zip
 sudo mv tdlua.so /usr/lib/x86_64-linux-gnu/lua/5.2/tdlua.so
-rm -fr tdlua.zip
+rm -fr luatele.zip
 sudo lua5.2 Fast.lua
 ;;
 esac
