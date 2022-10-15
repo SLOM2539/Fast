@@ -19,6 +19,19 @@ apt update
 apt upgrade
 sudo apt-get update
 sudo apt-get upgrade
+sudo  wget https://luarocks.org/releases/luarocks-2.4.3.tar.gz
+sudo  tar zxpf luarocks-2.4.3.tar.gz
+cd luarocks-2.4.3
+./configure; sudo make bootstrap
+sudo luarocks install luasocket
+sudo luarocks install luasec
+sudo luarocks install luautf8
+sudo luarocks install redis-lua
+sudo  luarocks remove lua-cjson2
+sudo  luarocks remove lua-cjson
+sudo  apt-get install lua-cjson
+sudo luarocks install Lua-cURL
+cd ..
 sudo apt-get install tmux
 sudo apt-get install luarocks
 sudo apt-get install screen
@@ -42,54 +55,38 @@ sudo apt-get install software-properties-common -y
 sudo apt-get install libnotify-dev -y 
 sudo apt-get install lua-space -y
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev -y
-apt install python3
+apt install python3.8
 apt install python3-pip
+python3.8 -m pip install --upgrade pip
+python3.8 -m pip install --upgrade setuptools
+python3.8 -m pip install -r ./source/requirements.txt
+python3.8 -m pip install py_tgcalls
+python3.8 -m pip install pyrogram==1.4.9
 pip3 install yt-dlp
 pip3 install ffmpeg 
 apt install ffmpeg 
+apt install python3-wget
+sudo apt install npm
+curl -sL https://deb.nodesource.com/setup_17.x -o /tmp/nodesource_setup.sh
+sudo bash /tmp/nodesource_setup.sh
+sudo apt install nodejs
 apt install gnome-calculator
+pip3 install gtts
 sudo apt-get update 
 sudo apt-get upgrade -y
 cd ..
 rm -rf luarocks*
-unzip MeroLua.zip
-sudo mv MeroLua.so /usr/lib/x86_64-linux-gnu/lua/5.2/MeroLua.so
-sudo mv MeroTele.lua /usr/local/share/lua/5.2/MeroTele.lua
-sudo apt update
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt upgrade
-sudo apt-get install redis-server
-sudo apt-get install liblua5.3-dev
-sudo apt install lua5.3
-sudo apt install zip
-sudo apt install build-essential checkinstall zlib1g-dev -y
-sudo apt install g++-4.7 c++-4.7
-sudo apt install gcc-4.9
-sudo apt upgrade libstdc++6
-sudo apt install libreadline-dev libconfig-dev libssl-dev lua5.3 liblua5.3-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
-sudo apt install screen
-sudo apt install libnotify-dev
-sudo apt install libconfig++9v5 libstdc++6
-sudo apt install libconfig++8-dev
-sudo apt install lua-lgi
-sudo apt install build-essential checkinstall zlib1g-dev -y
-mkdir tmp
-cd tmp
-wget https://luarocks.org/releases/luarocks-3.3.0.tar.gz --no-check-certificate
-tar zxpf luarocks-3.3.0.tar.gz
-cd luarocks-3.3.0
-./configure && make && sudo make install
-sudo luarocks install luarocks
-sudo luarocks install luasec
-sudo luarocks install luasocket
-cd ../..
-rm -rf tmp
-unzip luatele.zip
-sudo lua5.3 Fast.lua
+unzip tdlua.zip
+sudo mv tdlua.so /usr/lib/x86_64-linux-gnu/lua/5.2/tdlua.so
+rm -fr tdlua.zip
+sudo lua5.2 Fast.lua
 ;;
 2)
 echo -e "\e[1m\e[32mThe bot is running now : جاري تشغيل البوت الان : \e[0m"
 sleep 2
-sudo lua5.3 Fast.lua
+unzip tdlua.zip
+sudo mv tdlua.so /usr/lib/x86_64-linux-gnu/lua/5.2/tdlua.so
+rm -fr tdlua.zip
+sudo lua5.2 Fast.lua
 ;;
 esac
